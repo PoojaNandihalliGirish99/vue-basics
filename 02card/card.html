@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <script src="https://unpkg.com/vue@next"></script>
+    <title>Document</title>
+</head>
+<body class="bg-dark text-white">
+    <div class="container mt-4">
+        <div class="card vapp" style="width: 18rem;">
+          <!-- v-bind is ':' symbol - it is a directive given by vue - respnsible for binding html elements with script variable we are passing -->
+          <!-- use only ':' symoblo(see example of img src below) or 
+          use v-bind:attribute="variableName"(see example of href below) -->
+          <!-- observe the syntax for mounting myImg inside src - it is called shorthand notation-->
+            <img :src="myImg" class="card-img-top" alt="strawberry">
+            <div class="card-body">
+              <h5 class="card-title text-dark">{{heading}}</h5>
+              <p class="card-text text-dark">{{subhead}}</p>
+              <!-- observe the syntax for mounting url inside href - it is called shorthand notation -->
+              <a v-bind:href="url" class="btn btn-primary">Button</a>
+            </div>
+          </div>
+        
+    </div>
+    
+    <script src="./script.js"></script>
+</body>
+</html>
