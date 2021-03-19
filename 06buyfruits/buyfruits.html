@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <script src="https://unpkg.com/vue@next"></script>
+    <title>Buy fruits</title>
+</head>
+<body class="bg-dark text-white">
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-md-12" id="vapp">
+                <!-- computed returns a value finalBill -->
+                <h2 class="display-3">Your bill is : {{finalBill}}</h2>
+                <div v-for="(fruits, index) in fruitsList"
+                :key = "fruits.id"
+                class="card mt-4 vapp" 
+                style="width: 18rem;">
+                    <img :src="fruits.fruitImg" class="card-img-top" alt="strawberry">
+                    <div class="card-body">
+                      <h5 class="card-title text-dark">{{fruits.fruitname}}</h5>
+                      <p class="card-text text-dark">{{fruits.subtitle}}</p>
+
+                            <a href="#" @click="addToHolder(fruits)" class="btn btn-primary">Button</a>
+
+                            <p class="text-center bg-success p-2">₹{{fruits.price}}</p>
+                         
+                        
+                      </div>
+
+
+                      
+                      
+                    </div>
+                  </div>
+            </div>
+        </div>
+        
+    </div>
+    
+    <script src="./script.js"></script>
+</body>
+</html>
